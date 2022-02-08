@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<!-- Ocean themed web site by Sophie Su 2020.06.28 to 2021.01.21 -->
+
+<html>
+   <head>
+      <title>Sophie Su</title>
+	  <link rel="icon" href="../img/r.png" type="image/icon type">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="../css/animation.css" />
+      <link rel="stylesheet" type="text/css" href="../css/content.css" />
+      <link rel="stylesheet" type="text/css" href="../css/matery.css" />
+      <link rel="stylesheet" type="text/css" href="../css/base.css" />
+      <link rel="stylesheet" type="text/css" href="../css/slideshow.css" />
+      <script type="text/javascript" src="../js/transition.js"></script> 
+      <!--external links-->
+      <script src="../js/jquery.min.js"></script> <!--responsible for js animation-->
+      <link rel="stylesheet" type="text/css" href="../css/awesome/css/font-awesome.min.css">
+      <!--fonts and icons-->
+      <link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
+      <script src="../js/matery.js"></script>
+   
+      <script> <!--supports background slideshow animation-->
+         document.documentElement.className = "js";
+         var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+         supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+      </script>
+  
+   </head>
+   <body style="overflow:scroll; position:relative;">
+  
+
+ 
+	
+	    <script src="../js/polyfill.min.js"></script>
+      <script type="text/javascript" src="../js/material.js"></script> 
+      <script src="../js/matery.js"></script>
+	  
+	  
+      <!--Background slideshow ===animation.css=== -->  
+      <ul class="cb-slideshow">
+         <li><span style=" background-image: url(../img/one.jpg);">Image 01</span><div></div></li>
+         <li><span style=" background-image: url(../img/two.jpg);">Image 02</span><div></div></li>
+         <li><span style=" background-image: url(../img/three.jpg);">Image 03</span><div></div></li>
+         <li><span style=" background-image: url(../img/one.jpg);">Image 04</span><div></div></li>
+         <li><span style=" background-image: url(../img/two.jpg);">Image 05</span><div></div></li>
+         <li><span style=" background-image: url(../img/three.jpg);">Image 06</span><div></div></li>
+      </ul>
+ 
+ 
+	
+ 	<div style="width:100%; height: 100px; background-color:transparent; z-index:99999999; position: fixed;">
+	            <header class="navbar-fixed" style="position:fixed;">
+               <nav id="headNav" class="bg-color nav-transparent" >
+                  <div id="navContainer" class="nav-wrapper container" >
+                     <div class="brand-logo" style="left:0;">
+                        <a href="/" class="waves-effect waves-light">
+                        <img src="../img/r.png" class="logo-img">   
+                        <span class="logo-span" >Sophie Su</span>
+                        </a>
+                     </div>
+                     <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+                     <ul class="right nav-menu">
+                        <li class="hide-on-med-and-down nav-item" >
+                           <a href="/" class="waves-effect waves-light">  
+                           <i class="fa fa-home"></i>
+                           <span>Home</span>
+                           </a>     
+                        </li>
+                        <li class="hide-on-med-and-down nav-item" >
+                           <a href="tags" class="waves-effect waves-light">
+                           <i class="fa fa-folder-open"></i>
+                           <span>Projects</span>
+                           </a>
+                        </li>
+                        <li class="hide-on-med-and-down nav-item" >
+                           <a href="categories" class="waves-effect waves-light">
+                           <i class="fa fa-archive"></i>
+                           <span>Documents</span>
+                           </a>    
+                        </li>
+                        <li class="hide-on-med-and-down nav-item" >
+                           <a href="archives" class="waves-effect waves-light">
+                           <i class="fa fa-coffee"></i>
+                           <span>Experiences</span>
+                           </a> 
+                        </li>
+                        <li class="hide-on-med-and-down nav-item" >
+                           <a href="AV" class="waves-effect waves-light">
+                           <i class="fa fa-envelope"></i>
+                           <span>Message</span>
+                           </a>
+                        </li>
+                        <li class="hide-on-med-and-down nav-item" >
+                           <a href="galleries" class="waves-effect waves-light">
+                           <i class="fa fa-photo"></i>
+                           <span>Gallery</span>
+                           </a>    
+                        </li>
+                        <li class="hide-on-med-and-down nav-item" >      
+                           <a href="about" class="waves-effect waves-light">
+                           <i class="fa fa-user-circle-o"></i>
+                           <span>About</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+                           <i id="searchIcon" class="fa fa-search" title="Search"></i>
+                           </a>
+                        </li>
+                     </ul>
+                     <div id="mobile-nav" class="side-nav sidenav">
+                        <div class="mobile-head bg-color">
+                           <img src="medias/logo.png" class="logo-img circle responsive-img">
+                           <div class="logo-name">Sophie Su</div>
+                           <div class="logo-desc">
+                              University of Kansas | Information Technology | Cyber Security
+                           </div>
+                        </div>
+                        <ul class="menu-list mobile-menu-list">
+                           <li>
+                              <a href="/" class="waves-effect waves-light">
+                              <i class="fa fa-fw fa-home"></i>
+                              Home
+                              </a>
+                           </li>
+                           <li>
+                              <a href="tags" class="waves-effect waves-light">
+                              <i class="fa fa-fw fa-folder-open"></i>
+                              Projects
+                              </a>
+                           </li>
+                           <li>
+                              <a href="categories" class="waves-effect waves-light">
+                              <i class="fa fa-fw fa-archive"></i>
+                              Documents
+                              </a>
+                           </li>
+                           <li>
+                              <a href="archives" class="waves-effect waves-light">
+                              <i class="fa fa-fw fa-coffee"></i>
+                              Experiences
+                              </a>
+                           </li>
+                           <li>
+                              <a href="AV" class="waves-effect waves-light">
+                              <i class="fa fa-fw fa-envelope"></i>
+                              Message
+                              </a>
+                           </li>
+                           <li>
+                              <a href="galleries" class="waves-effect waves-light">   
+                              <i class="fa fa-fw fa-photo"></i>
+                              Gallery
+                              </a>
+                           </li>
+                           <li>
+                              <a href="about" class="waves-effect waves-light"> 
+                              <i class="fa fa-fw fa-user-circle-o"></i>
+                              About
+                              </a>
+                           </li>
+                           <li>
+                              <div class="divider"></div>
+                           </li>
+                           <li>
+                              <a href="https://github.com/shw2018/shw2018.github.io" class="waves-effect waves-light" target="_blank">
+                              <i class="fa fa-github-square fa-fw"></i>Fork Me
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  
+				  <style>
+                     .nav-transparent .github-corner {
+                     display: none !important;
+                     }
+                     .github-corner {
+                     position: absolute;
+                     z-index: 10;
+                     top: 0;
+                     right: 0;
+                     border: 0;
+                     transform: scale(1.1);
+                     }
+                     .github-corner svg {
+                     color: #767ec4;
+                     fill: #cacffc;
+                     height: 64px;
+                     width: 64px;
+                     }
+                     .github-corner:hover .octo-arm {
+                     animation: a 0.56s ease-in-out;
+                     }
+                     .github-corner .octo-arm {
+                     animation: none;
+                     }
+                     @keyframes a {
+                     0%,
+                     to {
+                     transform: rotate(0);
+                     }
+                     20%,
+                     60% {
+                     transform: rotate(-25deg);
+                     }
+                     40%,
+                     80% {
+                     transform: rotate(10deg);
+                     }
+                     }
+                  </style>
+                  <a href="https://github.com/SophieSue/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+                     data-tooltip="Fork Me" data-position="left" data-delay="50">
+                     <svg viewBox="0 0 250 250" aria-hidden="true">
+                        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+                        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                           fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+                        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                           fill="currentColor" class="octo-body"></path>
+                     </svg>
+                  </a>
+				 
+               </nav>
+            </header>
+
+	</div>
+ 
+ 
+    <div style="background-image:url(../img/o.png); " class="articleheadphoto">  <!-- $replace Path to the header image-->
+	
+	 <p class="ppp" style="float:right; text-align:right; margin: 100px 20px auto auto;font-size: 15px;"><i>  
+	 <!-- $replace Photo Caption-->  
+	 </i></p> 
+	 
+	</div>
+ 
+
+	  
+   <div class="articlecontainer">
+   <p style="margin: 20px auto auto auto; width:80%;  text-align:center; ">
+   Date Published: April 18, 2020	&nbsp; |	&nbsp; 
+   Author: Sophie Su	&nbsp; | 	&nbsp;
+   Length: 1347<!-- $replace Article character count--> Characters
+   </p>
+   
+<hr class="thr">
+
+
+		<h5 style="margin:20px auto 20px auto; width: 80%;"> Capstone Project - A Social Media Website </h5> <hr class="thr">
+		
+		
+<div class="articleinner">
+<br>
+<p>
+<b>Overview </b> <br><br>
+Our Capstone is a year long undergraduate project which I worked together with Adrinna Williams. Our purpose is to create 
+a social networking webpage that focuses on user interaction, communication, and content sharing by providing users with an accessible application 
+and website to help them find friends. This online platform allows user to share similar interests, passions, and hopefully free time to interact through our application.
+A difficulty we often face in communication is attempting to discover a shared hobby among friends. This 
+can be somewhat difficult to approach from conversation, especially if one is particularly shy.
+
+</p><br>
+
+<p>
+We name our website Overlap intended to help users find friends with overlapping interests by making each user's chosen hobbies 
+publicly avaliable through their profile page. The goal is to bring people who would never otherwise meet each other become closer together and help them be more fulfilled with their passions by sharing them with others, whether these passions be online gaming, reading, moviews, role-playing, or sports, etc. 
+</p><br>
+
+
+<!-- $replace Images within the article--> 
+   <div class="articleinnerphoto" style="background-image:url(../img/overlaphome.jpg)"> <!-- $replace photo pathway-->
+	
+	 <p class="ppp" style="float:right; background-color: rgba(0,0,0,0.3);color:white;text-align:right; margin: 350px 20px auto auto;font-size: 15px;"><i>Overlap homepage with logins and registration </i></p> 
+	 
+	</div><br>
+ <!-- $replace End of photo category-->
+ 
+<p>
+<b>Project Management</b> <br><br>
+Before development begin, managerial process took place to clearly define our project responsibilities 
+including timeline establishment, organization structure, risk1 management, architecture design, deployment, user interface, and associated technical processes. 
+
+The purpose is to provide guidelines for managing Overlap development by outline its internal data flow 
+in terms of processing, storage, and trnasmission of information. We generated project management artifacts to 
+guide us through system construction. Including project workspace, project identification, change control, configuration, and status reporting. 
+
+<br><br>
+
+Team lead (myself) is responsible for coordinating deliverables with status updates, communications and accuiring necessary resources by the due date. 
+The project is developed by utilizing the Waterfall technique, tools such as JIRA and Garnet Chart are been used. 
+Task and activities are equally distributed among team member according to personal expertise. Finally, an object oriented analysis with code testing methologies 
+are performed for quality assurance purpose. </p><br>
+
+
+ <div class="articleinnerphoto" style="background-image:url(../img/image1.png); background-color:rgba(255,255,255,0.2);  opacity: 0.6; width: 70%; height:400px;"> <!-- $replace photo pathway-->
+	
+	 
+	</div><br>
+
+<p> 
+<b>Architecture Design</b><br>
+Our priotity is to understand user needs, which we performed rounds of use-case and requirement evaluations to determine 
+quantifiable, relevant, and detailed features that we are capable to implement. Five components are involved in the 
+application setup<br><br>
+&emsp; Administrator - development team given admin right to manage all established user accounts with code modification right<br>
+&emsp; User Interface - Graphical system enhances user experience with intuitive design that requires minimum effort to navigate our functions<br>
+&emsp; Web Server - computer used to host relavent functions through web page by store, process, and deliver Overlap contents to end users<br>
+&emsp; Database - MySQL used to store and organize user information in an accessible manner<br>
+&emsp; End Users - anyone who wishes to join Overlap or wishes to use Overlap functions<br><br> </p><br> 
+
+  <div class="articleinnerphoto" style="background-image:url(../img/capture.jpg); background-size: contain;
+background-repeat: no-repeat; background-color:transparent; width: 80%; height:400px;"> <!-- $replace photo pathway-->
+	
+	 <p class="ppp" style="float:right; background-color: rgba(0,0,0,0.3);color:white;text-align:left; margin: 350px 20px auto auto;font-size: 15px;"><i>Overlap sequence diagram on process flow  </i></p> 
+	 
+	</div><br>
+	
+	<p> 
+Overlap is to be developed as a website accessible by users with a username and password. 
+It consists of the internet established web server connected to database. When a user logs in or searches for other users, 
+the system accesses the database retriving necessary information to authenticate or return results respectively. We set system constraints as 
+initial information required from user registration given the following requirements (sample draw from requirement document):<br><br>
+<p style="margin-left: 20%;">
+&emsp; A user shall be a registered member of Overlap in order to login and access further web services<br>
+&emsp; The user shall be able to see the login screen upon opening of Overlap<br>
+&emsp; The user shall be able to see an icon indicating to receive support or help instructions for the 
+page<br>
+&emsp; Users shall be prompted to optionally reset their password after three failed login attempts<br>
+&emsp; The user shall not have replicated cell phone number, and email address provided<br>
+&emsp; Overlap shall prompt an interest “Overlap Discovery Survey” upon registration<br>
+&emsp; The user shall be redirected to the homepage upon successful login<br>
+&emsp; Overlap shall incorporate Two-Factor Authentication for login with email and phone number<br>
+&emsp; The user shall be able to search persons by username<br>
+&emsp; The user shall be able to search persons by interest tag<br>
+&emsp; Overlap shall be able to match according to interest tag<br>
+&emsp; The user shall be able to comment on paired users post<br>
+&emsp; The user shall see an availability schedule of the user from selecting their profile<br> <p>
+</p><br>
+
+
+ 
+
+<!-- $replace Images within the article--> 
+   <div class="articleinnerphoto" style="background-image:url(../img/image7.png); width: 70%;height:450px;"> <!-- $replace photo pathway-->
+	
+	 <p class="ppp" style="float:right; background-color: rgba(0,0,0,0.3);color:white;text-align:right; margin: 350px 20px auto auto;font-size: 15px;"><i>Overlap package diagram in response to domain management  </i></p> 
+	 
+	</div><br>
+ <!-- $replace End of photo category-->
+ 
+
+<p>
+<b>Site Features</b><br><br>
+
+Overlap has three primary functions, 
+pairing, communication, and the User Profiles.<br><br>
+<u> User Pairing </u>is one of our most unique features. Upon user request, system matches two users with shared interests 
+and pairs them to chat! The algorithm check user interest tag and automatically matches existing user in the database with 
+highest percentage of similarities. When one user using the Website’s search functions attempts to communicate with a paired user who shares similar interest either via a private message to said user, or other methods made known to the user via the paired user’s profile, such as their Discord, Twitter, or other social network accounts.
+User’s may make information about themselves public for other users to see, such as alternate contact methods, their open schedule, interests, and may choose how much information is shared publicly, with friends, and with specific friends, in case users find certain information to be worth keeping private.
+
+<br><br>
+<u>Event Scheduler</u> is a calander feature Overlap offers for planning interactive plays with friends. Overlap uses 
+Full Calendar plugin for this feature where user may indicate and view friends free time to fully engage in group activities. 
+To do so, user may modify dates and times on Calendar such as insert, delete, or reschedule events as desired. These modifications are synced with database.<br><br>
+
+<u>Real-Time Chat</u> Communication increases self-esteem, builds connection and establish good friendship. Our real-time chat enables live communication among users. Consisting of page quick chat window and chatroom uilt 
+specifically for interactive communication with friends. Overlap also offers design customization where user may 
+select preferenced color design. Fun-box functions (emoji) are also offered to better engage with friends with chatting 
+histories stored in database for tracking purpose. 
+
+</p><br>
+
+ <div class="articleinnerphoto" style="background-image:url(../img/feat.jpg); height:500px;"> <!-- $replace photo pathway-->
+	
+	 <p class="ppp" style="float:right; background-color: rgba(0,0,0,0.3);color:white;text-align:right; margin: 300px 20px auto auto;font-size: 15px;"><i>Overlap feature overview (from presentation slides) </i></p> 
+	 
+	</div><br>
+
+
+<p> 
+<b>Security Implementation</b><br><br>
+An important goal of Overlap is to secure user data. Two-Factor authentication is used including 
+session variable, form methods, and XXL measures taken to protect our data. Furthermore, SQL prevention measures are 
+implemented at code level. Possible future improvement would be implementing hashed database password to help protect 
+against attackers. An 18-digit authentication code is randomly generated and sent to user email that was registered with their Overlap account. 
+Successful verification authenticates user credentials through use of SESSION variable to enhance the 
+confidentiality of our user. 
+
+</p><br>
+
+
+ <div class="articleinnerphoto" style="background-image:url(../img/security.jpg); height:500px;"> <!-- $replace photo pathway-->
+	
+	 
+	</div><br>
+	
+<p>
+<b>Sample Screenshots</b><br><br>
+<u>Having Overlap been one of our early school project, the site is no longer hosted </u>due to lack of maintenance effort and potential resource constraints. 
+The development for Overlap was not flawless. In fact, few bugs still remain, despite multiple changes and rework that took place. However, our team is very pround of ourselves 
+for the completion of our development. The following images presents screenshots of the running site. 
+
+</p><br>
+
+
+
+ <div class="articleinnerphoto" style="background-image:url(../img/home.jpg); height:500px;"> <!-- $replace photo pathway--></div><br>
+  <div class="articleinnerphoto" style="background-image:url(../img/theme.jpg); height:500px;"> <!-- $replace photo pathway--></div><br>
+ <div class="articleinnerphoto" style="background-image:url(../img/chat.jpg); background-color:transparent; width: 80%; height:800px;"> <!-- $replace photo pathway--></div><br>
+ <div class="articleinnerphoto" style="background-image:url(../img/post.jpg);  background-color:transparent; width: 100%; height:400px;"> <!-- $replace photo pathway--></div><br>
+ <div class="articleinnerphoto" style="background-image:url(../img/schedule.jpg); height:500px;"> <!-- $replace photo pathway--></div><br>
+ <div class="articleinnerphoto" style="background-image:url(../img/flyer.jpg); background-color:transparent; height:700px;"> <!-- $replace photo pathway--></div><br>
+
+
+<hr class="thr" style="width:100%;">
+<br>
+<a href= "/"> <p style="text-align:right;"> Go Back --></p> </a>
+<br>
+</div>
+
+     
+   </div>
+   
+   
+
+   </body>
+</html>
